@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. author: phora
 -->
 
 We set up our site for our github page last night using a Linux computer that already had nikola installed. Since we also needed to work on the site at school, we also had to set nikola up on school computers. To do this, we had to run the following commands:

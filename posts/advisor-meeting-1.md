@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. author: phora
 -->
 
 We met with our advisor today from 10:20-10:50 and reported our progress. Here were the major points of the meeting:

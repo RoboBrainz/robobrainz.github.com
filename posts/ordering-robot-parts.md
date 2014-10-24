@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. author: pengor
 -->
 
 On Tuesday we ordered the first set of parts for the robot from [SparkFun Electronics](https://www.sparkfun.com/), enough to get the robot moving. The only necessary component that we didn't purchase was an Arduino microcontroller, which we already have in our possession. Along with this board we went with a fairly basic robot design favoring simplicity when possible. The order consisted of:
