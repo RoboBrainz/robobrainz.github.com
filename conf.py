@@ -25,7 +25,7 @@ SITE_URL = "/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 BASE_URL = "/"
-BLOG_EMAIL = ""
+BLOG_EMAIL = "paraiscc@plu.edu,johnsodm@plu.edu"
 BLOG_DESCRIPTION = "RoboBrainz"  # (translatable)
 
 # Nikola is multilingual!
