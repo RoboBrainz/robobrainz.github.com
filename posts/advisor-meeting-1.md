@@ -19,8 +19,8 @@ We met with our advisor today from 10:20-10:50 and reported our progress. Here w
 * Found a bug in nikola\plugins\task\sitemap\__init__.py. It wasn't checking if directories were directories in a cross-platform manner. Will report this to the developers with an official patch.
 
 # Drew
-* Order the parts from SparkFun
-* Chassis has built in motors
+* Order the parts from SparkFun.
+* Chassis has built in motors.
 * We may need a separate shield for driving the wheels?
-* Probably going to drive the motors with DC
-* Settled on multicolor LEDs because single color LEDs can get confusing for debugging
+* Probably going to drive the motors with DC.
+* Settled on multicolor LEDs because single color LEDs can get confusing for debugging.
