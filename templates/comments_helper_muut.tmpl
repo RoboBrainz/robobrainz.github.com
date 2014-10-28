@@ -1,0 +1,21 @@
+## -*- coding: utf-8 -*-
+
+<%def name="comment_form(url, title, identifier)">
+	%if comment_system_id:
+	<div id="muut-thread"></div>
+    <a class="muut" href="https://muut.com/i/${comment_system_id}/${identifier}">${comment_system_id} forums</a>
+	%endif
+</%def>
+
+<%def name="comment_link(link, identifier)">
+    %if comment_system_id:
+	<a href="${link}#muut-thread">Comments<a>
+    %endif
+</%def>
+
+
+<%def name="comment_link_script()">
+%if comment_system_id:
+<script src="//cdn.muut.com/1/moot.min.js"></script>
+%endif
+</%def>
