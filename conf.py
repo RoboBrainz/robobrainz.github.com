@@ -483,12 +483,12 @@ CONTENT_FOOTER_FORMATS = {
 # systems.  The following comment systems are supported by Nikola:
 #   disqus, facebook, googleplus, intensedebate, isso, livefyre, muut
 # You can leave this option blank to disable comments.
-COMMENT_SYSTEM = ""
+COMMENT_SYSTEM = "muut"
 # And you also need to add your COMMENT_SYSTEM_ID which
 # depends on what comment system you use. The default is
 # "nikolademo" which is a test account for Disqus. More information
 # is in the manual.
-COMMENT_SYSTEM_ID = ""
+COMMENT_SYSTEM_ID = "robobrainz"
 
 # Enable annotations using annotateit.org?
 # If set to False, you can still enable them for individual posts and pages
@@ -688,6 +688,9 @@ SEARCH_FORM = """
 EXTRA_HEAD_DATA = """
 <link rel="stylesheet" type="text/css" href="/assets/css/tipuesearch.css">
 <div id="tipue_search_content" style="margin-left: auto; margin-right: auto; padding: 20px;"></div>
+<link rel="stylesheet" type="text/css" href="//cdn.muut.com/1/moot.css">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 """
 
 # Google Analytics or whatever else you use. Added to the bottom of <body>
@@ -698,6 +701,7 @@ EXTRA_HEAD_DATA = """
 BODY_END = """
 <script src="/assets/js/tipuesearch_set.js"></script>
 <script src="/assets/js/tipuesearch.js"></script>
+<script src="//cdn.muut.com/1/moot.min.js"></script>
 <script>
 $(document).ready(function() {
     $('#tipue_search_input').tipuesearch({

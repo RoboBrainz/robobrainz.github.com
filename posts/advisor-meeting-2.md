@@ -28,6 +28,7 @@ We met with our advisor today from 10:20-10:50 and reported our progress.  Here 
 * The theme for the website could be updated. It looks a little plain compared to [my personal site](http://phora.github.io).
 * Start learning about how heuristic functions are used in AI.
 * Look at the [Numenta NUPIC code](http://numenta.org/nupic.html).
+* I should probably enable some form of commenting system on the blog. Will do so now.
 
 # Drew
 * Unavailable for the meeting due to external circumstances.
