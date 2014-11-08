@@ -17,6 +17,7 @@ LiveUSB's Arch Linux installer wouldn't boot. After inspecting the specs for all
 3. It is easy to install only the packages needed
 
 And the packages and packages we installed on the machines were:
+
 * base{,-devel} - Required for all Arch Linux machines. base-devel is an assumed prerequisite for using the AUR.
 * kdebase - Easy to set up, ultra-customizable GUI
 * kdegraphics-{gwenview,okular} - Basic needs (image viewing, pdf viewing)
