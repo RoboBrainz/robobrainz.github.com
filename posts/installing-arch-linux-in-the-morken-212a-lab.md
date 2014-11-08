@@ -30,4 +30,4 @@ And the packages and packages we installed on the machines were:
 * kde-gtk-config - To keep all GUI widget themes consistent (this is important for the accessibility problems mentioned in [Emotiv EPOC SDK Experiments](/posts/emotiv-epoc-sdk-experiments/)). Also makes changing the color and styling without much technical knowhow.
 * firefox - Basic needs (browsing)
 
-In other news, an email just came in on 2014-11-07 stating that there was an unexpected turn of circumstances that provided. I applied for the refund, especially. This will mean we have to look at alternate hardware while waiting for it to come in and/or develop any demo code for the EEG device earlier than expected.
+In other news, an email just came in on 2014-11-07 stating that there was an unexpected turn of circumstances that provided. I applied for the refund, especially since we need the tests to be as early as possible. This will mean we have to look at alternate hardware while waiting for it to come in and/or develop any demo code for the EEG device earlier than expected (since the shipments are still applicable even after the refunds).
