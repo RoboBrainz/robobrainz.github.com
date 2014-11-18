@@ -9,6 +9,8 @@
 .. author: phora
 -->
 
+[EDIT]: It is now working! See [this commit](https://github.com/RoboBrainz/Test-EmoSDK/commit/32beedfc483208c4be261b2dd0704a7fb0e22b30) for how we did it.
+
 While we were working on our homework, I decided to try writing a test program that would simply. A lot of the code is just copied from ```/opt/EmotivResearch_2.0.0.20/doc/examples_Qt/example1/main.cpp```. The Makefile for the program was written from scratch. Here were the instructions I ran to compile it.
 
 	make clean
