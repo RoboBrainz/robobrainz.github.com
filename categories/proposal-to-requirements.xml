@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>RoboBrainz (proposal to requirements)</title><link>/</link><description></description><atom:link rel="self" type="application/rss+xml" href="/categories/proposal-to-requirements.xml"></atom:link><language>en</language><lastBuildDate>Tue, 02 Dec 2014 14:21:03 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Requirements Document Meeting Logs</title><link>/posts/requirements-document-meeting-logs/</link><dc:creator>phora</dc:creator><description>&lt;div&gt;&lt;h2 id="meeting-notes"&gt;Meeting Notes&lt;/h2&gt;
+&lt;p&gt;Here were the major points from our meeting with our supervisor, Dr. Michael Turi, and our capstone instructor, Dr. George Hauser:&lt;/p&gt;
+&lt;h3 id="with-dr-turi"&gt;With Dr. Turi&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The description part of the requirements document is similar to the goals section of the proposal.&lt;/li&gt;
+&lt;li&gt;The tasks we laid out should have a more pessimistic outlook.&lt;/li&gt;
+&lt;li&gt;The use case template we pasted into the document is fine. It might not hurt to include situations like, "What if the signal's fuzzy?"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="with-dr-hauser"&gt;With Dr. Hauser&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Due to the large amount of unknowns with our project, the requirements might still be fuzzy. But that's okay since it's a draft.&lt;/li&gt;
+&lt;li&gt;It'd be neat to get the equipment before the presentation for the requirements document.&lt;/li&gt;
+&lt;li&gt;The class project web page should be in the introduction or in a special section near the end.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="document-work-summary"&gt;Document work summary&lt;/h2&gt;
+&lt;p&gt;After that, we continued working on the requirements document. Most of the work involved explaining requirements more technically and splitting up the tasks wherever they can go wrong. However, we're still a bit nervous that we may've not made the educational part of the description with the right amount of detail.&lt;/p&gt;
+&lt;p&gt;Furthermore, the amount of technicality for the rest of the goals might've either been too much (in cases where we knew how to expand it) or too little (in cases where we're &lt;em&gt;still&lt;/em&gt; not sure how to deal with it).&lt;/p&gt;&lt;/div&gt;</description><category>faculty meeting</category><category>proposal to requirements</category><category>requirements</category><category>tech docs</category><guid>/posts/requirements-document-meeting-logs/</guid><pubDate>Wed, 15 Oct 2014 19:33:01 GMT</pubDate></item></channel></rss>

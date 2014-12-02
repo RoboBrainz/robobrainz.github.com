@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>RoboBrainz (python3)</title><link>/</link><description></description><atom:link rel="self" type="application/rss+xml" href="/categories/python3.xml"></atom:link><language>en</language><lastBuildDate>Tue, 02 Dec 2014 14:21:03 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Setting up Nikola on PLU computers</title><link>/posts/setting-up-nikola-on-plu-computers/</link><dc:creator>phora</dc:creator><description>&lt;div&gt;&lt;p&gt;We set up our site for our github page last night using a Linux computer that already had nikola installed. Since we also needed to work on the site at school, we also had to set nikola up on school computers. To do this, we had to run the following commands:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install most of the dependencies using pip&lt;br&gt;
+&lt;code&gt;\Python34\Scripts\pip install --root=/path/to/destdir nikola&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install nikola using the &lt;a href="https://github.com/getnikola/nikola"&gt;github version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/a/23397327"&gt;Edit C:\Python34\Lib\distutils\msvc9compiler.py at line 294 to hardcode 12.0 as the MSVC version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/a/6035864"&gt;Remove all instances of -mcygwin from C:\Python34\Lib\distutils\cygwinccompiler.py&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install lxml using &lt;a href="http://lxml.de/installation.html"&gt;the official instructions for MS Windows&lt;/a&gt; and specify the path to install like in step 1.&lt;/li&gt;
+&lt;li&gt;Install blinker, six, markupsafe, logbook, natsort, yapsy, and pyrss2gen manually with pip&lt;/li&gt;
+&lt;li&gt;Construct a shell script file to automagically set environment variables to make manually copying nikola to a location where the executable can be run a lot less painful (as in, no need to type out extremely long path names): &lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;if test -d /cygdrive;then
+    #export PYPREFIX="/cygdrive/x/Apps/pylibs"
+    export PYPREFIX="/cygdrive/c/Users/PLUCSCE/Downloads/pylibs"
+else
+    #export PYPREFIX="/x/Apps/pylibs"
+    export PYPREFIX="/c/Users/PLUCSCE/Downloads/pylibs"
+fi
+
+export PYTHONPATH="&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;PYPREFIX&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/Python34:&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;PYPREFIX&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/Python34/lib:&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;PYPREFIX&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/Python34/lib/site-packages"
+export PATH="&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;PYPREFIX&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;/Python34/Scripts:&lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="n"&gt;PATH&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt;"
+&lt;/pre&gt;
+
+
+&lt;p&gt;With the installation complete, all we had to do was keep a copy on our x drives before copying it to the Downloads folder and source the script file before continuing to work with our site.&lt;/p&gt;&lt;/div&gt;</description><category>PLU computers</category><category>nikola</category><category>python</category><category>python3</category><guid>/posts/setting-up-nikola-on-plu-computers/</guid><pubDate>Thu, 09 Oct 2014 23:38:18 GMT</pubDate></item></channel></rss>
