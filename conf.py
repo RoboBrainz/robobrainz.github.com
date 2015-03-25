@@ -219,6 +219,9 @@ COMPILERS = {
 # Set to False for two-file posts, with separate metadata.
 # ONE_FILE_POSTS = True
 
+# Write a page showing all the tags used in posts on the blog
+WRITE_TAG_CLOUD = False
+
 # If this is set to True, the DEFAULT_LANG version will be displayed for
 # untranslated posts.
 # If this is set to False, then posts that are not translated to a language
