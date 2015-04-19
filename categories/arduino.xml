@@ -1,2 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>RoboBrainz (arduino)</title><link>/</link><description></description><atom:link rel="self" type="application/rss+xml" href="/categories/arduino.xml"></atom:link><language>en</language><lastBuildDate>Tue, 02 Dec 2014 14:21:03 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Communicating over Serial</title><link>/posts/communicating-over-serial/</link><dc:creator>pengor</dc:creator><description>&lt;p&gt;Today we got a basic serial communication setup between our Arduino and a command line running through Linux. The code for the demo is available in our Hardware Demos GitHub repository. This is important for the project because it enables us to begin connecting the two main aspects of the project, the rover and the Emotiv EPOC headpiece. In the demo we pass RGB decimal values from the command line to the Arduino and it returns the corresponding hexadecimal color code.&lt;/p&gt;</description><category>LEDs</category><category>arduino</category><category>command line</category><category>serial</category><guid>/posts/communicating-over-serial/</guid><pubDate>Tue, 02 Dec 2014 22:12:46 GMT</pubDate></item><item><title>Tested Arduino SDK</title><link>/posts/tested-arduino-sdk/</link><dc:creator>phora</dc:creator><description>&lt;p&gt;We were able to get the sample programs included in the arduino SDK to run on the arduino board we ordered. Check out the &lt;a href="/galleries/Arduino_Test/"&gt;screenshots&lt;/a&gt;! We'll also probably upload the code to the project site later (even though it's just a modified version of Blink to see if phora could understand the calls that the program made).&lt;/p&gt;</description><category>arduino</category><category>linux</category><category>sdk</category><category>test program</category><guid>/posts/tested-arduino-sdk/</guid><pubDate>Wed, 12 Nov 2014 02:58:16 GMT</pubDate></item></channel></rss>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RoboBrainz (arduino)</title><link>/</link><description></description><atom:link href="/categories/arduino.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 19 Apr 2015 00:51:21 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Crunchtime!</title><link>/posts/crunchtime/</link><dc:creator>pengor</dc:creator><description>&lt;div&gt;&lt;p&gt;We give our presentation during the Natural Sciences Academic Festival in just under two weeks and the semester is coming to a close soon after. That means we're kicking our project development into top gear!&lt;/p&gt;
+&lt;p&gt;What have we been working on? Well our EEG headset is fully functional and capable of collecting data in realtime, but the trick is &lt;a href="https://github.com/RoboBrainz/OpenBCI_EEG_Classifier"&gt;classifying incoming waveforms&lt;/a&gt; as emotional states from that incoming data. We're still trying to get that finalized.&lt;/p&gt;
+&lt;p&gt;The rover is fully operational and can perform a variety of different &lt;a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/tree/master/FancyMovement"&gt;movements&lt;/a&gt; that can be placed in our &lt;a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/tree/master/ActionDBTest"&gt;database&lt;/a&gt; and selected by the artificial intelligence.&lt;/p&gt;
+&lt;p&gt;Finally, we need to get all of our devices happily talking to each other, which we're also still working on.&lt;/p&gt;
+&lt;p&gt;Hopefully our next update will include some nice results, wish us luck!&lt;/p&gt;&lt;/div&gt;</description><category>EEG</category><category>arduino</category><category>crunchtime</category><category>linux</category><category>project</category><category>python</category><category>status</category><category>update</category><guid>/posts/crunchtime/</guid><pubDate>Sun, 19 Apr 2015 07:50:00 GMT</pubDate></item><item><title>Troubles with the OpenBCI Python library only when used outside of the demo program</title><link>/posts/troubles-with-the-openbci-python-library-only-when-used-outside-of-the-demo-program/</link><dc:creator>phora</dc:creator><description>&lt;div&gt;&lt;p&gt;Unfortunately, the project seems to drift farther and farther away even though&lt;br&gt;
+we're sure of the algorithms we will use to implement our robot. There's a &lt;a href="https://github.com/RoboBrainz/OpenBCI_EEG_Classifier"&gt;draft EEG waveform processor&lt;/a&gt; that will most likely be using &lt;a href="http://wiki.scipy.org/Cookbook/ButterworthBandpass"&gt;a bandpass filter in SciPy&lt;/a&gt; &lt;br&gt;
+to reduce as much noise as possible from the outside by limiting the data to &lt;br&gt;
+&lt;strong&gt;12.5 Hz&lt;/strong&gt; to &lt;strong&gt;30.0 Hz&lt;/strong&gt; for the sensors that take EEG asymmetry into account for certain emotions (like sad&lt;br&gt;
+evoking beta waves primarily on the left and happy evoking beta waves primarily on the right). The other sensors will most likely read facial gestures to further narrow the idenitified emotion. Alternatively, more&lt;br&gt;
+complex classification trends can be found at an &lt;a href="https://sites.google.com/site/biofeedbackpages/function-map"&gt;10-20 function map&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While we're working out the EEG classification, we've also started drafting skeleton code for the&lt;br&gt;
+&lt;a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/blob/master/ActionDBTest/ActionDBTest.ino"&gt;cart AI&lt;/a&gt; &lt;br&gt;
+making use of the &lt;a href="https://code.google.com/p/arduino-edb/"&gt;EDB&lt;/a&gt; library to persistently store scores for action/response pairs. Currently the available actions for the robot haven't been merged into the main code yet.&lt;/p&gt;
+&lt;p&gt;However, the draft tool for &lt;a href="https://gist.github.com/phora/331728d46e3dcd0e3200#file-manually_labeled_waveforms-py"&gt;quickly marking the OpenBCI board's data with emotion labels&lt;/a&gt; &lt;br&gt;
+is refusing to store any of the packets that're retrieved through the &lt;a href="https://github.com/OpenBCI/OpenBCI_Python"&gt;OpenBCI Python API&lt;/a&gt;. &lt;br&gt;
+This is troublesome because the draft classifier uses the same library as the small tool for manually marking&lt;br&gt;
+the data before we store those into a folder that can be easily copied into the &lt;a href="http://smartrubix.com/start-here/"&gt;Rubix A-10 board&lt;/a&gt; so the EEG classification data can be easily modified. &lt;br&gt;
+Additionally, working with the A-10 also allows us to not worry as much about RAM constraints for processing the data.&lt;/p&gt;
+&lt;p&gt;Currently, here's the terminal output for our program.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;python2 manually_labeled_waveforms.py /dev/ttyUSB0 
+@Connecting to /dev/ttyUSB0
+@Serial established...
+@ADS1299 Device ID: 0x3E
+@LIS3DH Device ID: 0x33
+@Free RAM: 447
+@$$$
+Warning: Warning: Unexpected END_BYTE found &amp;lt;97&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;109&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;32&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;116&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;105&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;109&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;101&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;100&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;32&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;111&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;117&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;116&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;13&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;10&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;79&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;The @'d lines only occur if the board is turned on precisely when the program starts.&lt;br&gt;
+After this, the program would write a file that contained none of the packets it tried to pick up.&lt;/p&gt;
+&lt;p&gt;Compare this to the terminal output from &lt;a href="https://github.com/OpenBCI/OpenBCI_Python/blob/master/user.py"&gt;the demonstration program that came with the library&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;python2 ../OpenBCI_Python/user.py -p /dev/ttyUSB0 --add csv_collect
+
+            USER.py
+
+------------SETTINGS-------------
+Notch filtering: True
+
+-------INSTANTIATING BOARD-------
+Connecting to /dev/ttyUSB0
+Serial established...
+No daisy: &lt;span class="m"&gt;8&lt;/span&gt; EEG channels and &lt;span class="m"&gt;3&lt;/span&gt; AUX channels at 250.0 Hz.
+
+------------PLUGINS--------------
+Found plugins: &lt;span class="o"&gt;[&lt;/span&gt; print &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; udp_server &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; csv_collect &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; streamer_tcp &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; sample_rate &lt;span class="o"&gt;]&lt;/span&gt;
+
+Activating &lt;span class="o"&gt;[&lt;/span&gt; csv_collect &lt;span class="o"&gt;]&lt;/span&gt; plugin...
+Will &lt;span class="nb"&gt;export &lt;/span&gt;CSV to: 2015-4-18_19-40-21.csv
+Plugin &lt;span class="o"&gt;[&lt;/span&gt; csv_collect &lt;span class="o"&gt;]&lt;/span&gt; added to the list
+--------------INFO---------------
+User serial interface enabled...
+View &lt;span class="nb"&gt;command &lt;/span&gt;map at http://docs.openbci.com.
+Type /start to run -- and /stop before issuing new commands afterwards.
+Type /exit to exit. 
+Board outputs are automatically printed as: 
+%  &amp;lt;tab&amp;gt;  message
+&lt;span class="nv"&gt;$$$ &lt;/span&gt;signals end of message
+
+-------------BEGIN---------------
+
+--&amp;gt; /start
+Warning: Skipped &lt;span class="m"&gt;158&lt;/span&gt; bytes before start found
+�
+--&amp;gt; Warning: Warning: Unexpected END_BYTE found &amp;lt;160&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;1&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;130&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;243&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;224&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;130&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;252&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;246&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;129&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;124&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;148&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;128&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;130&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;228&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;157&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;130&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;240&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;154&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;129&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;90&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;200&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;128&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+Warning: Warning: Unexpected END_BYTE found &amp;lt;0&amp;gt; instead of &amp;lt;192&amp;gt;,            discarted packet with id &amp;lt;0&amp;gt;
+
+--&amp;gt; /exit
+Warning: Stopping streaming...
+Wait &lt;span class="k"&gt;for&lt;/span&gt; buffer to flush...
+Warning: Closing Serial...
+Deactivating Plugins...
+Closing, CSV saved to: 2015-4-18_19-40-21.csv
+User.py exiting...
+
+&lt;span class="nv"&gt;$ &lt;/span&gt;ls
+total 848K
+428K 2015-4-18_14-15-19.csv  4.0K CHANGELOG.md     12K open_bci_v3.pyc      4.0K plugin_interface.pyc  8.0K README.md  4.0K TODO.md  4.0K waveform_classify.py
+348K 2015-4-18_19-40-21.csv   16K open_bci_v3.py  4.0K plugin_interface.py  4.0K plugins/              4.0K scripts/   8.0K user.py
+&lt;/pre&gt;
+
+
+&lt;p&gt;As the output of ls shows, the data is successfully written to the file with the program that came with the library.&lt;/p&gt;&lt;/div&gt;</description><category>arduino</category><category>linux</category><category>openbci</category><category>python</category><category>rubix</category><guid>/posts/troubles-with-the-openbci-python-library-only-when-used-outside-of-the-demo-program/</guid><pubDate>Sun, 19 Apr 2015 02:37:28 GMT</pubDate></item><item><title>Spring Semester - A whole bunch of TODOs</title><link>/posts/spring-semester-a-whole-bunch-of-todos/</link><dc:creator>phora</dc:creator><description>&lt;div&gt;&lt;p&gt;Spring semester's a month in and we hadn't updated the blog until now. Part of&lt;br&gt;
+this was due to needing to find a new meeting time to meet with our advisor,&lt;br&gt;
+polishing what we had for the cart, understanding how to denoise data using&lt;br&gt;
+the FFT transformation of said data, and thumbing through the source code for&lt;br&gt;
+the OpenBCI boards.&lt;/p&gt;
+&lt;p&gt;There a few things that we discovered about using the OpenBCI boards in our project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We'd need to find a way to install the RFDuino library so the Arduino IDE&lt;br&gt;
+can access it and properly program the dongle and the board.&lt;/li&gt;
+&lt;li&gt;We had to resort to stitching some vinyl onto some velcro to make applying the &lt;br&gt;
+electrodes to ourselves a lot easier.&lt;/li&gt;
+&lt;li&gt;Our master plan of powering the OpenBCI dongle with 3V from the Arduino pin&lt;br&gt;
+didn't work. However, using a cut USB female cord does work to power it.&lt;/li&gt;
+&lt;li&gt;At some point, we need to solder the headers for the OpenBCI boards.&lt;/li&gt;
+&lt;li&gt;We'd need to find a way to write the firmware for the dongle so it can still talk&lt;br&gt;
+to the OpenBCI GUI when plugged in. We're planning to have the dongle talk to the OpenBCI&lt;br&gt;
+board as a middle man so the rover can receive data from the board wirelessly. This&lt;br&gt;
+will be done over a serial established with two of the free pins on the dongle.&lt;/li&gt;
+&lt;li&gt;If the FFT calculations prove to be too much for the OpenBCI dongle, OpenBCI board,&lt;br&gt;
+or the Arduino driving the cart, then we might need to get specialized hardware to do&lt;br&gt;
+the FFT calculations. Chances of this are pretty slim though since we have plenty of Arduinos.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>arduino</category><category>faculty meeting</category><category>fft</category><category>group meeting</category><category>linux</category><category>openbci</category><category>rfduino</category><category>sdk</category><guid>/posts/spring-semester-a-whole-bunch-of-todos/</guid><pubDate>Wed, 11 Mar 2015 02:28:37 GMT</pubDate></item><item><title>Communicating over Serial</title><link>/posts/communicating-over-serial/</link><dc:creator>pengor</dc:creator><description>&lt;p&gt;Today we got a basic serial communication setup between our Arduino and a command line running through Linux. The code for the demo is available in our Hardware Demos GitHub repository. This is important for the project because it enables us to begin connecting the two main aspects of the project, the rover and the Emotiv EPOC headpiece. In the demo we pass RGB decimal values from the command line to the Arduino and it returns the corresponding hexadecimal color code.&lt;/p&gt;</description><category>LEDs</category><category>arduino</category><category>command line</category><category>serial</category><guid>/posts/communicating-over-serial/</guid><pubDate>Tue, 02 Dec 2014 22:12:46 GMT</pubDate></item><item><title>Tested Arduino SDK</title><link>/posts/tested-arduino-sdk/</link><dc:creator>phora</dc:creator><description>&lt;p&gt;We were able to get the sample programs included in the arduino SDK to run on the arduino board we ordered. Check out the &lt;a href="/galleries/Arduino_Test/"&gt;screenshots&lt;/a&gt;! We'll also probably upload the code to the project site later (even though it's just a modified version of Blink to see if phora could understand the calls that the program made).&lt;/p&gt;</description><category>arduino</category><category>linux</category><category>sdk</category><category>test program</category><guid>/posts/tested-arduino-sdk/</guid><pubDate>Wed, 12 Nov 2014 02:58:16 GMT</pubDate></item></channel></rss>

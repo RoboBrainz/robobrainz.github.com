@@ -6,130 +6,174 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>/categories/arch-linux.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/arduino.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/command-line.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/compiling-troubles.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/crunchtime.xml</loc>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/eeg.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/emotiv.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/faculty-meeting.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/fft.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/group-meeting.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/gui.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/leds.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/linux.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/nikola.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/openbci.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/pkgbuild.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/please-package-properly.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/plu-computers.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/presentation-prep.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/presentation.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/project.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/proposal-to-requirements.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/python.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/python3.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/requirements.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/rfduino.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/robot-parts.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/robot.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/rubix.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/sdk.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/serial.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/software.xml</loc>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/status.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/tech-docs.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/test-program.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/update.xml</loc>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/usability.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/workspace-preparation.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/galleries/Arduino_Test/rss.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/galleries/Emotiv_EPOC_SDK/rss.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/galleries/rss.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/rss.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2014-12-02</lastmod>
+  <lastmod>2015-04-19</lastmod>
  </sitemap>
 </sitemapindex>

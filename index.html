@@ -106,6 +106,332 @@
 <div class="postindex">
     <article class="h-entry post-text">
     <header>
+        <h1 class="p-name entry-title"><a href="posts/crunchtime/" class="u-url">Crunchtime!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/pengor">pengor</a></span></p>
+            <p class="dateline"><a href="posts/crunchtime/" rel="bookmark"><time class="published dt-published" datetime="2015-04-18T23:50:00-08:00" itemprop="datePublished" title="Publication date">2015-04-18 23:50</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/crunchtime/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>We give our presentation during the Natural Sciences Academic Festival in just under two weeks and the semester is coming to a close soon after. That means we're kicking our project development into top gear!</p>
+<p>What have we been working on? Well our EEG headset is fully functional and capable of collecting data in realtime, but the trick is <a href="https://github.com/RoboBrainz/OpenBCI_EEG_Classifier">classifying incoming waveforms</a> as emotional states from that incoming data. We're still trying to get that finalized.</p>
+<p>The rover is fully operational and can perform a variety of different <a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/tree/master/FancyMovement">movements</a> that can be placed in our <a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/tree/master/ActionDBTest">database</a> and selected by the artificial intelligence.</p>
+<p>Finally, we need to get all of our devices happily talking to each other, which we're also still working on.</p>
+<p>Hopefully our next update will include some nice results, wish us luck!</p>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/troubles-with-the-openbci-python-library-only-when-used-outside-of-the-demo-program/" class="u-url">Troubles with the OpenBCI Python library only when used outside of the demo program</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
+            <p class="dateline"><a href="posts/troubles-with-the-openbci-python-library-only-when-used-outside-of-the-demo-program/" rel="bookmark"><time class="published dt-published" datetime="2015-04-18T19:37:28-07:00" itemprop="datePublished" title="Publication date">2015-04-18 19:37</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/troubles-with-the-openbci-python-library-only-when-used-outside-of-the-demo-program/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>Unfortunately, the project seems to drift farther and farther away even though<br>
+we're sure of the algorithms we will use to implement our robot. There's a <a href="https://github.com/RoboBrainz/OpenBCI_EEG_Classifier">draft EEG waveform processor</a> that will most likely be using <a href="http://wiki.scipy.org/Cookbook/ButterworthBandpass">a bandpass filter in SciPy</a> <br>
+to reduce as much noise as possible from the outside by limiting the data to <br>
+<strong>12.5 Hz</strong> to <strong>30.0 Hz</strong> for the sensors that take EEG asymmetry into account for certain emotions (like sad<br>
+evoking beta waves primarily on the left and happy evoking beta waves primarily on the right). The other sensors will most likely read facial gestures to further narrow the idenitified emotion. Alternatively, more<br>
+complex classification trends can be found at an <a href="https://sites.google.com/site/biofeedbackpages/function-map">10-20 function map</a>.</p>
+<p>While we're working out the EEG classification, we've also started drafting skeleton code for the<br>
+<a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/blob/master/ActionDBTest/ActionDBTest.ino">cart AI</a> <br>
+making use of the <a href="https://code.google.com/p/arduino-edb/">EDB</a> library to persistently store scores for action/response pairs. Currently the available actions for the robot haven't been merged into the main code yet.</p>
+<p>However, the draft tool for <a href="https://gist.github.com/phora/331728d46e3dcd0e3200#file-manually_labeled_waveforms-py">quickly marking the OpenBCI board's data with emotion labels</a> <br>
+is refusing to store any of the packets that're retrieved through the <a href="https://github.com/OpenBCI/OpenBCI_Python">OpenBCI Python API</a>. <br>
+This is troublesome because the draft classifier uses the same library as the small tool for manually marking<br>
+the data before we store those into a folder that can be easily copied into the <a href="http://smartrubix.com/start-here/">Rubix A-10 board</a> so the EEG classification data can be easily modified. <br>
+Additionally, working with the A-10 also allows us to not worry as much about RAM constraints for processing the data.</p>
+<p>Currently, here's the terminal output for our program.</p>
+<pre class="code literal-block">python2 manually_labeled_waveforms.py /dev/ttyUSB0 
+@Connecting to /dev/ttyUSB0
+@Serial established...
+@ADS1299 Device ID: 0x3E
+@LIS3DH Device ID: 0x33
+@Free RAM: 447
+@$$$
+Warning: Warning: Unexpected END_BYTE found &lt;97&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;109&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;32&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;116&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;105&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;109&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;101&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;100&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;32&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;111&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;117&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;116&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;13&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;10&gt; instead of &lt;192&gt;,            discarted packet with id &lt;79&gt;
+</pre>
+
+
+<p>The @'d lines only occur if the board is turned on precisely when the program starts.<br>
+After this, the program would write a file that contained none of the packets it tried to pick up.</p>
+<p>Compare this to the terminal output from <a href="https://github.com/OpenBCI/OpenBCI_Python/blob/master/user.py">the demonstration program that came with the library</a></p>
+<pre class="code literal-block"><span class="nv">$ </span>python2 ../OpenBCI_Python/user.py -p /dev/ttyUSB0 --add csv_collect
+
+            USER.py
+
+------------SETTINGS-------------
+Notch filtering: True
+
+-------INSTANTIATING BOARD-------
+Connecting to /dev/ttyUSB0
+Serial established...
+No daisy: <span class="m">8</span> EEG channels and <span class="m">3</span> AUX channels at 250.0 Hz.
+
+------------PLUGINS--------------
+Found plugins: <span class="o">[</span> print <span class="o">]</span> <span class="o">[</span> udp_server <span class="o">]</span> <span class="o">[</span> csv_collect <span class="o">]</span> <span class="o">[</span> streamer_tcp <span class="o">]</span> <span class="o">[</span> sample_rate <span class="o">]</span>
+
+Activating <span class="o">[</span> csv_collect <span class="o">]</span> plugin...
+Will <span class="nb">export </span>CSV to: 2015-4-18_19-40-21.csv
+Plugin <span class="o">[</span> csv_collect <span class="o">]</span> added to the list
+--------------INFO---------------
+User serial interface enabled...
+View <span class="nb">command </span>map at http://docs.openbci.com.
+Type /start to run -- and /stop before issuing new commands afterwards.
+Type /exit to exit. 
+Board outputs are automatically printed as: 
+%  &lt;tab&gt;  message
+<span class="nv">$$$ </span>signals end of message
+
+-------------BEGIN---------------
+
+--&gt; /start
+Warning: Skipped <span class="m">158</span> bytes before start found
+�
+--&gt; Warning: Warning: Unexpected END_BYTE found &lt;160&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;1&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;130&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;243&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;224&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;130&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;252&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;246&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;129&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;124&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;148&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;128&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;130&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;228&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;157&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;130&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;240&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;154&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;129&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;90&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;200&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;128&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+Warning: Warning: Unexpected END_BYTE found &lt;0&gt; instead of &lt;192&gt;,            discarted packet with id &lt;0&gt;
+
+--&gt; /exit
+Warning: Stopping streaming...
+Wait <span class="k">for</span> buffer to flush...
+Warning: Closing Serial...
+Deactivating Plugins...
+Closing, CSV saved to: 2015-4-18_19-40-21.csv
+User.py exiting...
+
+<span class="nv">$ </span>ls
+total 848K
+428K 2015-4-18_14-15-19.csv  4.0K CHANGELOG.md     12K open_bci_v3.pyc      4.0K plugin_interface.pyc  8.0K README.md  4.0K TODO.md  4.0K waveform_classify.py
+348K 2015-4-18_19-40-21.csv   16K open_bci_v3.py  4.0K plugin_interface.py  4.0K plugins/              4.0K scripts/   8.0K user.py
+</pre>
+
+
+<p>As the output of ls shows, the data is successfully written to the file with the program that came with the library.</p>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/spring-semester-a-whole-bunch-of-todos/" class="u-url">Spring Semester - A whole bunch of TODOs</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
+            <p class="dateline"><a href="posts/spring-semester-a-whole-bunch-of-todos/" rel="bookmark"><time class="published dt-published" datetime="2015-03-10T19:28:37-07:00" itemprop="datePublished" title="Publication date">2015-03-10 19:28</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/spring-semester-a-whole-bunch-of-todos/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>Spring semester's a month in and we hadn't updated the blog until now. Part of<br>
+this was due to needing to find a new meeting time to meet with our advisor,<br>
+polishing what we had for the cart, understanding how to denoise data using<br>
+the FFT transformation of said data, and thumbing through the source code for<br>
+the OpenBCI boards.</p>
+<p>There a few things that we discovered about using the OpenBCI boards in our project:</p>
+<ul>
+<li>We'd need to find a way to install the RFDuino library so the Arduino IDE<br>
+can access it and properly program the dongle and the board.</li>
+<li>We had to resort to stitching some vinyl onto some velcro to make applying the <br>
+electrodes to ourselves a lot easier.</li>
+<li>Our master plan of powering the OpenBCI dongle with 3V from the Arduino pin<br>
+didn't work. However, using a cut USB female cord does work to power it.</li>
+<li>At some point, we need to solder the headers for the OpenBCI boards.</li>
+<li>We'd need to find a way to write the firmware for the dongle so it can still talk<br>
+to the OpenBCI GUI when plugged in. We're planning to have the dongle talk to the OpenBCI<br>
+board as a middle man so the rover can receive data from the board wirelessly. This<br>
+will be done over a serial established with two of the free pins on the dongle.</li>
+<li>If the FFT calculations prove to be too much for the OpenBCI dongle, OpenBCI board,<br>
+or the Arduino driving the cart, then we might need to get specialized hardware to do<br>
+the FFT calculations. Chances of this are pretty slim though since we have plenty of Arduinos.</li>
+</ul>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/running-the-openbci-gui/" class="u-url">Running the OpenBCI GUI</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
+            <p class="dateline"><a href="posts/running-the-openbci-gui/" rel="bookmark"><time class="published dt-published" datetime="2014-12-23T11:06:04-08:00" itemprop="datePublished" title="Publication date">2014-12-23 11:06</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/running-the-openbci-gui/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>We recently just tested running the OpenBCI GUI according to the <a href="posts/running-the-openbci-gui/">docs</a>.</p>
+<p>However, what the documentation neglected to mention is that if you run the binary<br>
+from the archive without changing into the directory where it and its libraries are held,<br>
+then you will get the following output on the console and a nonfunctional GUI:</p>
+<pre class="code literal-block"><span class="x">The font "Raleway-SemiBold.otf" is missing or inaccessible, make sure the URL is valid or that the file has been added to your sketch and is readable.</span>
+<span class="x">The font "Raleway-Regular.otf" is missing or inaccessible, make sure the URL is valid or that the file has been added to your sketch and is readable.</span>
+<span class="x">The font "Raleway-SemiBold.otf" is missing or inaccessible, make sure the URL is valid or that the file has been added to your sketch and is readable.</span>
+<span class="x">ControlP5 2.2.2 infos, comments, questions at http://www.sojamo.de/libraries/controlP5</span>
+<span class="x">Exception in thread "Animation Thread" java.lang.RuntimeException: java.lang.NullPointerException</span>
+<span class="x">    at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)</span>
+<span class="x">    at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)</span>
+<span class="x">    at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)</span>
+<span class="x">    at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)</span>
+<span class="x">    at javax.media.opengl.Threading.invoke(Threading.java:191)</span>
+<span class="x">    at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)</span>
+<span class="x">    at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)</span>
+<span class="x">    at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)</span>
+<span class="x">    at processing.core.PApplet.run(PApplet.java:2256)</span>
+<span class="x">    at java.lang.Thread.run(Thread.java:745)</span>
+<span class="x">Caused by: java.lang.NullPointerException</span>
+<span class="x">    at controlP5.ControlFont.checkFontSize(Unknown Source)</span>
+<span class="x">    at controlP5.ControlFont.&lt;init&gt;(Unknown Source)</span>
+<span class="x">    at controlP5.Label.setFont(Unknown Source)</span>
+<span class="x">    at controlP5.Textfield.setFont(Unknown Source)</span>
+<span class="x">    at OpenBCI_GUI</span><span class="p">$</span><span class="nv">DataLogBox</span><span class="x">.&lt;init&gt;(OpenBCI_GUI.java:2892)</span>
+<span class="x">    at OpenBCI_GUI</span><span class="p">$</span><span class="nv">ControlPanel</span><span class="x">.&lt;init&gt;(OpenBCI_GUI.java:2445)</span>
+<span class="x">    at OpenBCI_GUI.setup(OpenBCI_GUI.java:281)</span>
+<span class="x">    at processing.core.PApplet.handleDraw(PApplet.java:2361)</span>
+<span class="x">    at processing.opengl.PJOGL</span><span class="p">$</span><span class="nv">PGLListener</span><span class="p">.</span><span class="nv">display</span><span class="p">(</span><span class="err">PJOGL.java:</span><span class="m">862</span><span class="p">)</span><span class="x"></span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)</span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)</span>
+<span class="x">    at javax.media.opengl.awt.GLCanvas</span><span class="p">$</span><span class="x">10.run(GLCanvas.java:1289)</span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)</span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)</span>
+<span class="x">    at javax.media.opengl.awt.GLCanvas</span><span class="p">$</span><span class="x">11.run(GLCanvas.java:1300)</span>
+<span class="x">    at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)</span>
+<span class="x">    at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)</span>
+<span class="x">    at java.awt.EventQueue.access</span><span class="p">$</span><span class="x">200(EventQueue.java:103)</span>
+<span class="x">    at java.awt.EventQueue</span><span class="p">$</span><span class="x">3.run(EventQueue.java:694)</span>
+<span class="x">    at java.awt.EventQueue</span><span class="p">$</span><span class="x">3.run(EventQueue.java:692)</span>
+<span class="x">    at java.security.AccessController.doPrivileged(Native Method)</span>
+<span class="x">    at java.security.ProtectionDomain</span><span class="p">$</span><span class="x">1.doIntersectionPrivilege(ProtectionDomain.java:76)</span>
+<span class="x">    at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)</span>
+<span class="x">    at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)</span>
+<span class="x">RESIZED</span>
+<span class="x">The font "Raleway-SemiBold.otf" is missing or inaccessible, make sure the URL is valid or that the file has been added to your sketch and is readable.</span>
+<span class="x">The font "Raleway-Regular.otf" is missing or inaccessible, make sure the URL is valid or that the file has been added to your sketch and is readable.</span>
+<span class="x">The font "Raleway-SemiBold.otf" is missing or inaccessible, make sure the URL is valid or that the file has been added to your sketch and is readable.</span>
+<span class="x">Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException</span>
+<span class="x">    at controlP5.ControlFont.checkFontSize(Unknown Source)</span>
+<span class="x">    at controlP5.ControlFont.&lt;init&gt;(Unknown Source)</span>
+<span class="x">    at controlP5.Label.setFont(Unknown Source)</span>
+<span class="x">    at controlP5.Textfield.setFont(Unknown Source)</span>
+<span class="x">    at OpenBCI_GUI</span><span class="p">$</span><span class="nv">DataLogBox</span><span class="x">.&lt;init&gt;(OpenBCI_GUI.java:2892)</span>
+<span class="x">    at OpenBCI_GUI</span><span class="p">$</span><span class="nv">ControlPanel</span><span class="x">.&lt;init&gt;(OpenBCI_GUI.java:2445)</span>
+<span class="x">    at OpenBCI_GUI.setup(OpenBCI_GUI.java:281)</span>
+<span class="x">    at processing.core.PApplet.handleDraw(PApplet.java:2361)</span>
+<span class="x">    at processing.opengl.PJOGL</span><span class="p">$</span><span class="nv">PGLListener</span><span class="p">.</span><span class="nv">display</span><span class="p">(</span><span class="err">PJOGL.java:</span><span class="m">862</span><span class="p">)</span><span class="x"></span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)</span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)</span>
+<span class="x">    at javax.media.opengl.awt.GLCanvas</span><span class="p">$</span><span class="x">10.run(GLCanvas.java:1289)</span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)</span>
+<span class="x">    at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)</span>
+<span class="x">    at javax.media.opengl.awt.GLCanvas</span><span class="p">$</span><span class="x">11.run(GLCanvas.java:1300)</span>
+<span class="x">    at javax.media.opengl.Threading.invoke(Threading.java:193)</span>
+<span class="x">    at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)</span>
+<span class="x">    at javax.media.opengl.awt.GLCanvas.paint(GLCanvas.java:595)</span>
+<span class="x">    at sun.awt.RepaintArea.paintComponent(RepaintArea.java:264)</span>
+<span class="x">    at sun.awt.X11.XRepaintArea.paintComponent(XRepaintArea.java:73)</span>
+<span class="x">    at sun.awt.RepaintArea.paint(RepaintArea.java:240)</span>
+<span class="x">    at sun.awt.X11.XComponentPeer.handleEvent(XComponentPeer.java:591)</span>
+<span class="x">    at java.awt.Component.dispatchEventImpl(Component.java:4948)</span>
+<span class="x">    at java.awt.Component.dispatchEvent(Component.java:4698)</span>
+<span class="x">    at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)</span>
+<span class="x">    at java.awt.EventQueue.access</span><span class="p">$</span><span class="x">200(EventQueue.java:103)</span>
+<span class="x">    at java.awt.EventQueue</span><span class="p">$</span><span class="x">3.run(EventQueue.java:694)</span>
+<span class="x">    at java.awt.EventQueue</span><span class="p">$</span><span class="x">3.run(EventQueue.java:692)</span>
+<span class="x">    at java.security.AccessController.doPrivileged(Native Method)</span>
+<span class="x">    at java.security.ProtectionDomain</span><span class="p">$</span><span class="x">1.doIntersectionPrivilege(ProtectionDomain.java:76)</span>
+<span class="x">    at java.security.ProtectionDomain</span><span class="p">$</span><span class="x">1.doIntersectionPrivilege(ProtectionDomain.java:87)</span>
+<span class="x">    at java.awt.EventQueue</span><span class="p">$</span><span class="x">4.run(EventQueue.java:708)</span>
+<span class="x">    at java.awt.EventQueue</span><span class="p">$</span><span class="x">4.run(EventQueue.java:706)</span>
+<span class="x">    at java.security.AccessController.doPrivileged(Native Method)</span>
+<span class="x">    at java.security.ProtectionDomain</span><span class="p">$</span><span class="x">1.doIntersectionPrivilege(ProtectionDomain.java:76)</span>
+<span class="x">    at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)</span>
+<span class="x">    at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)</span>
+<span class="x">    at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)</span>
+<span class="x">X11Util.Display: Shutdown (JVM shutdown: true, open (no close attempt): 1/1, reusable (open, marked uncloseable): 0, pending (open in creation order): 1)</span>
+<span class="x">X11Util: Open X11 Display Connections: 1</span>
+<span class="x">X11Util: Open[0]: NamedX11Display[:0, 0x7f79186a7620, refCount 1, unCloseable false]</span>
+</pre>
+
+
+<p>After we ran it from the commandline in the directory where the executable was held,<br>
+we were able to run the GUI.</p>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
         <h1 class="p-name entry-title"><a href="posts/communicating-over-serial/" class="u-url">Communicating over Serial</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/pengor">pengor</a></span></p>
@@ -390,109 +716,6 @@ LiveUSB's Arch Linux installer wouldn't boot. After inspecting the specs for all
 </div>
     </div>
     </article>
-    <article class="h-entry post-text">
-    <header>
-        <h1 class="p-name entry-title"><a href="posts/emotiv-epoc-sdk-experiments/" class="u-url">Emotiv EPOC SDK Experiments</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
-            <p class="dateline"><a href="posts/emotiv-epoc-sdk-experiments/" rel="bookmark"><time class="published dt-published" datetime="2014-10-26T14:58:12-07:00" itemprop="datePublished" title="Publication date">2014-10-26 14:58</time></a></p>
-                <p class="commentline">
-        
-	<a href="posts/emotiv-epoc-sdk-experiments/#muut-thread">Comments</a><a>
-
-</a></p>
-        </div>
-    </header>
-    <div class="e-content entry-content">
-    <div>
-<p>So I started playing around with the SDK and the SDK's provided tools. I've kept some <a href="galleries/Emotiv_EPOC_SDK/">screenshots</a> to highlight some of the usability problems I encountered. The first two screenshots highlight aesthetic usability issues in EmoComposer since it tries to stick out with its widgets. The same could be said for the EmotivControlPanel, which also sticks out due to the custom styling on the buttons and other widgets. While I do have experience with writing <a href="http://qt-project.org/doc/qt-4.8/stylesheet.html">Qt Style Sheets</a> and the EmotivControlPanel even supports loading a custom stylesheet, this functionality is useless without documenting the widgets used to construct the interface. I'd recommend the Emotiv developers document what widgets the users need to write the stylesheets for for their SDK tools and/or remove all custom styling except for the custom widgets should they stick with a proprietary model. Personally, I'd prefer a combination of both so the Emotiv developers can keep their custom styling with a stylesheet, but allow the users to turn this off in case they can't easily read the interface.</p>
-<p>Other than that, the EmotivControlPanel works just as expected when tested with the EmoComposer, even though I frequently confused the "Push Skill" slider with carrying out the "Push" outside of training mode for the Affectiv Suite. The documentation does not mention that the EmoComposer can't save user profiles to it. Trying to do so will cause the EmotivControlPanel to freeze, requiring the user to manually kill the application.</p>
-<p>Surprisingly, the EmoKey and the TestBench software don't stick out as much. The only issues I encountered with it were not triggering when the blink button was pressed in EmoComposer, not fully closing even after "Quit" is clicked on the system tray (which again, requires the application to be killed manually), and not launching keybindings such as Alt+F3 (which brings up the window management menu for me) and Ctrl+Space (which launches Kupfer). Even with the QListView's row coloring, the custom colors are done correctly since it defines both a foreground color and a background color. This makes the software more accessible to people with unusual color schemes.</p>
-<p>I haven't been able to test the TestBench software since it has no ability to connect with the EmoComposer. Hopefully this'll change in the future, but I don't know what changes will be necessary to do this. At least it closes properly when Application → Quit is selected.</p>
-<p>I will also be documenting any experiences I have with Emotiv's developers in the future. So far, the support's been pretty responsive.</p>
-</div>
-    </div>
-    </article>
-    <article class="h-entry post-text">
-    <header>
-        <h1 class="p-name entry-title"><a href="posts/group-meeting-1/" class="u-url">Group Meeting 1</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
-            <p class="dateline"><a href="posts/group-meeting-1/" rel="bookmark"><time class="published dt-published" datetime="2014-10-23T21:58:22-07:00" itemprop="datePublished" title="Publication date">2014-10-23 21:58</time></a></p>
-                <p class="commentline">
-        
-	<a href="posts/group-meeting-1/#muut-thread">Comments</a><a>
-
-</a></p>
-        </div>
-    </header>
-    <div class="e-content entry-content">
-    <div>
-<p>We met today to get started on our requirements presentation and revising our requirements document. On top of needing to add class diagrams and sequence diagrams to it, we also noticed there were some use cases we should document. The most notable case was how we would let the user differentiate between a weak signal and confused input. We are also going to add drawings of each of our use cases to help clarify them.</p>
-<p>So far, the presentation's mostly outlined. We'll get to filling in the content for the presentation over the weekend (including rudimentary storyboards for our presentations that'll likely be in *.xcf or *.svg format) and adding more documentation on our experiments with the Emotiv SDK.</p>
-</div>
-    </div>
-    </article>
-    <article class="h-entry post-text">
-    <header>
-        <h1 class="p-name entry-title"><a href="posts/ordering-robot-parts/" class="u-url">Ordering Robot Parts</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/pengor">pengor</a></span></p>
-            <p class="dateline"><a href="posts/ordering-robot-parts/" rel="bookmark"><time class="published dt-published" datetime="2014-10-23T16:40:58-07:00" itemprop="datePublished" title="Publication date">2014-10-23 16:40</time></a></p>
-                <p class="commentline">
-        
-	<a href="posts/ordering-robot-parts/#muut-thread">Comments</a><a>
-
-</a></p>
-        </div>
-    </header>
-    <div class="e-content entry-content">
-    <div>
-<p>On Tuesday we ordered the first set of parts for the robot from <a href="https://www.sparkfun.com/">SparkFun Electronics</a>, enough to get the robot moving. The only necessary component that we didn't purchase was an Arduino microcontroller, which we already have in our possession. Along with this board we went with a fairly basic robot design favoring simplicity when possible. The order consisted of:<br>
-* 1 <a href="https://www.sparkfun.com/products/12089">Multi-Chassis - 4WD Kit (Basic)</a> - A rectangular chassis that has four independently-motorized wheels<br>
-* 2 <a href="https://www.sparkfun.com/products/9457">Motor Driver 1A Dual TB6612FNG</a> - The intermediaries between the microcontroller (essentially the robot's brain) and the motors<br>
-* 1 <a href="https://www.sparkfun.com/products/12999">5 Pack of 5mm Addressable RGB LEDs</a> - These will be used for debugging and user-feedback, different colors representing different messages<br>
-* 1 <a href="https://www.sparkfun.com/products/710">Graphic LCD 128x64</a> - Mostly just tacked this on to get free shipping, but it could wind up in the project if we want another form of output</p>
-<p>We're excited to get working on the hardware, but first up is preparing for our requirements presentation on next Thursday!</p>
-</div>
-    </div>
-    </article>
-    <article class="h-entry post-text">
-    <header>
-        <h1 class="p-name entry-title"><a href="posts/advisor-meeting-1/" class="u-url">Advisor Meeting 1</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
-            <p class="dateline"><a href="posts/advisor-meeting-1/" rel="bookmark"><time class="published dt-published" datetime="2014-10-20T10:59:13-07:00" itemprop="datePublished" title="Publication date">2014-10-20 10:59</time></a></p>
-                <p class="commentline">
-        
-	<a href="posts/advisor-meeting-1/#muut-thread">Comments</a><a>
-
-</a></p>
-        </div>
-    </header>
-    <div class="e-content entry-content">
-    <div>
-<p>We met with our advisor today from 10:20-10:50 and reported our progress. Here were the major points of the meeting:</p>
-<h2 id="joan">Joan</h2>
-<ul>
-<li>Packaged the Fedora version of the Research SDK for Arch Linux.</li>
-<li>Found the most of the dependencies for the SDK. Still don't know what package provides libmkl_rt.</li>
-<li>Emailed the support team about the packaging of the SDK so the developer team could fix this.</li>
-<li>There's a fake data generator in the SDK lite for Windows and Mac (That's free!). So try to find the equivalent in the Linux SDK version.</li>
-<li>Finish work on not referencing the static copies of the library when possible.</li>
-<li>Found a bug in nikola\plugins\task\sitemap__init__.py. It wasn't checking if directories were directories in a cross-platform manner. Will report this to the developers with an official patch.</li>
-</ul>
-<h2 id="drew">Drew</h2>
-<ul>
-<li>Order the parts from SparkFun.</li>
-<li>Chassis has built in motors.</li>
-<li>We may need a separate shield for driving the wheels?</li>
-<li>Probably going to drive the motors with DC.</li>
-<li>Settled on multicolor LEDs because single color LEDs can get confusing for debugging.</li>
-</ul>
-</div>
-    </div>
-    </article>
 </div>
 
         <nav class="postindexpager">
@@ -515,7 +738,7 @@ LiveUSB's Arch Linux installer wouldn't boot. After inspecting the specs for all
         <!--End of body content-->
 
         <footer>
-            Contents © 2014         <a href="mailto:paraiscc@plu.edu,johnsodm@plu.edu">RoboBrainz</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2015         <a href="mailto:paraiscc@plu.edu,johnsodm@plu.edu">RoboBrainz</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
     </div>

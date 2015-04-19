@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RoboBrainz (rfduino)</title><link>/</link><description></description><atom:link href="/categories/rfduino.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 19 Apr 2015 00:51:21 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Spring Semester - A whole bunch of TODOs</title><link>/posts/spring-semester-a-whole-bunch-of-todos/</link><dc:creator>phora</dc:creator><description>&lt;div&gt;&lt;p&gt;Spring semester's a month in and we hadn't updated the blog until now. Part of&lt;br&gt;
+this was due to needing to find a new meeting time to meet with our advisor,&lt;br&gt;
+polishing what we had for the cart, understanding how to denoise data using&lt;br&gt;
+the FFT transformation of said data, and thumbing through the source code for&lt;br&gt;
+the OpenBCI boards.&lt;/p&gt;
+&lt;p&gt;There a few things that we discovered about using the OpenBCI boards in our project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We'd need to find a way to install the RFDuino library so the Arduino IDE&lt;br&gt;
+can access it and properly program the dongle and the board.&lt;/li&gt;
+&lt;li&gt;We had to resort to stitching some vinyl onto some velcro to make applying the &lt;br&gt;
+electrodes to ourselves a lot easier.&lt;/li&gt;
+&lt;li&gt;Our master plan of powering the OpenBCI dongle with 3V from the Arduino pin&lt;br&gt;
+didn't work. However, using a cut USB female cord does work to power it.&lt;/li&gt;
+&lt;li&gt;At some point, we need to solder the headers for the OpenBCI boards.&lt;/li&gt;
+&lt;li&gt;We'd need to find a way to write the firmware for the dongle so it can still talk&lt;br&gt;
+to the OpenBCI GUI when plugged in. We're planning to have the dongle talk to the OpenBCI&lt;br&gt;
+board as a middle man so the rover can receive data from the board wirelessly. This&lt;br&gt;
+will be done over a serial established with two of the free pins on the dongle.&lt;/li&gt;
+&lt;li&gt;If the FFT calculations prove to be too much for the OpenBCI dongle, OpenBCI board,&lt;br&gt;
+or the Arduino driving the cart, then we might need to get specialized hardware to do&lt;br&gt;
+the FFT calculations. Chances of this are pretty slim though since we have plenty of Arduinos.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>arduino</category><category>faculty meeting</category><category>fft</category><category>group meeting</category><category>linux</category><category>openbci</category><category>rfduino</category><category>sdk</category><guid>/posts/spring-semester-a-whole-bunch-of-todos/</guid><pubDate>Wed, 11 Mar 2015 02:28:37 GMT</pubDate></item></channel></rss>

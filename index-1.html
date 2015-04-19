@@ -106,6 +106,109 @@
 <div class="postindex">
     <article class="h-entry post-text">
     <header>
+        <h1 class="p-name entry-title"><a href="posts/emotiv-epoc-sdk-experiments/" class="u-url">Emotiv EPOC SDK Experiments</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
+            <p class="dateline"><a href="posts/emotiv-epoc-sdk-experiments/" rel="bookmark"><time class="published dt-published" datetime="2014-10-26T14:58:12-07:00" itemprop="datePublished" title="Publication date">2014-10-26 14:58</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/emotiv-epoc-sdk-experiments/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>So I started playing around with the SDK and the SDK's provided tools. I've kept some <a href="galleries/Emotiv_EPOC_SDK/">screenshots</a> to highlight some of the usability problems I encountered. The first two screenshots highlight aesthetic usability issues in EmoComposer since it tries to stick out with its widgets. The same could be said for the EmotivControlPanel, which also sticks out due to the custom styling on the buttons and other widgets. While I do have experience with writing <a href="http://qt-project.org/doc/qt-4.8/stylesheet.html">Qt Style Sheets</a> and the EmotivControlPanel even supports loading a custom stylesheet, this functionality is useless without documenting the widgets used to construct the interface. I'd recommend the Emotiv developers document what widgets the users need to write the stylesheets for for their SDK tools and/or remove all custom styling except for the custom widgets should they stick with a proprietary model. Personally, I'd prefer a combination of both so the Emotiv developers can keep their custom styling with a stylesheet, but allow the users to turn this off in case they can't easily read the interface.</p>
+<p>Other than that, the EmotivControlPanel works just as expected when tested with the EmoComposer, even though I frequently confused the "Push Skill" slider with carrying out the "Push" outside of training mode for the Affectiv Suite. The documentation does not mention that the EmoComposer can't save user profiles to it. Trying to do so will cause the EmotivControlPanel to freeze, requiring the user to manually kill the application.</p>
+<p>Surprisingly, the EmoKey and the TestBench software don't stick out as much. The only issues I encountered with it were not triggering when the blink button was pressed in EmoComposer, not fully closing even after "Quit" is clicked on the system tray (which again, requires the application to be killed manually), and not launching keybindings such as Alt+F3 (which brings up the window management menu for me) and Ctrl+Space (which launches Kupfer). Even with the QListView's row coloring, the custom colors are done correctly since it defines both a foreground color and a background color. This makes the software more accessible to people with unusual color schemes.</p>
+<p>I haven't been able to test the TestBench software since it has no ability to connect with the EmoComposer. Hopefully this'll change in the future, but I don't know what changes will be necessary to do this. At least it closes properly when Application → Quit is selected.</p>
+<p>I will also be documenting any experiences I have with Emotiv's developers in the future. So far, the support's been pretty responsive.</p>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/group-meeting-1/" class="u-url">Group Meeting 1</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
+            <p class="dateline"><a href="posts/group-meeting-1/" rel="bookmark"><time class="published dt-published" datetime="2014-10-23T21:58:22-07:00" itemprop="datePublished" title="Publication date">2014-10-23 21:58</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/group-meeting-1/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>We met today to get started on our requirements presentation and revising our requirements document. On top of needing to add class diagrams and sequence diagrams to it, we also noticed there were some use cases we should document. The most notable case was how we would let the user differentiate between a weak signal and confused input. We are also going to add drawings of each of our use cases to help clarify them.</p>
+<p>So far, the presentation's mostly outlined. We'll get to filling in the content for the presentation over the weekend (including rudimentary storyboards for our presentations that'll likely be in *.xcf or *.svg format) and adding more documentation on our experiments with the Emotiv SDK.</p>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/ordering-robot-parts/" class="u-url">Ordering Robot Parts</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/pengor">pengor</a></span></p>
+            <p class="dateline"><a href="posts/ordering-robot-parts/" rel="bookmark"><time class="published dt-published" datetime="2014-10-23T16:40:58-07:00" itemprop="datePublished" title="Publication date">2014-10-23 16:40</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/ordering-robot-parts/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>On Tuesday we ordered the first set of parts for the robot from <a href="https://www.sparkfun.com/">SparkFun Electronics</a>, enough to get the robot moving. The only necessary component that we didn't purchase was an Arduino microcontroller, which we already have in our possession. Along with this board we went with a fairly basic robot design favoring simplicity when possible. The order consisted of:<br>
+* 1 <a href="https://www.sparkfun.com/products/12089">Multi-Chassis - 4WD Kit (Basic)</a> - A rectangular chassis that has four independently-motorized wheels<br>
+* 2 <a href="https://www.sparkfun.com/products/9457">Motor Driver 1A Dual TB6612FNG</a> - The intermediaries between the microcontroller (essentially the robot's brain) and the motors<br>
+* 1 <a href="https://www.sparkfun.com/products/12999">5 Pack of 5mm Addressable RGB LEDs</a> - These will be used for debugging and user-feedback, different colors representing different messages<br>
+* 1 <a href="https://www.sparkfun.com/products/710">Graphic LCD 128x64</a> - Mostly just tacked this on to get free shipping, but it could wind up in the project if we want another form of output</p>
+<p>We're excited to get working on the hardware, but first up is preparing for our requirements presentation on next Thursday!</p>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/advisor-meeting-1/" class="u-url">Advisor Meeting 1</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
+            <p class="dateline"><a href="posts/advisor-meeting-1/" rel="bookmark"><time class="published dt-published" datetime="2014-10-20T10:59:13-07:00" itemprop="datePublished" title="Publication date">2014-10-20 10:59</time></a></p>
+                <p class="commentline">
+        
+	<a href="posts/advisor-meeting-1/#muut-thread">Comments</a><a>
+
+</a></p>
+        </div>
+    </header>
+    <div class="e-content entry-content">
+    <div>
+<p>We met with our advisor today from 10:20-10:50 and reported our progress. Here were the major points of the meeting:</p>
+<h2 id="joan">Joan</h2>
+<ul>
+<li>Packaged the Fedora version of the Research SDK for Arch Linux.</li>
+<li>Found the most of the dependencies for the SDK. Still don't know what package provides libmkl_rt.</li>
+<li>Emailed the support team about the packaging of the SDK so the developer team could fix this.</li>
+<li>There's a fake data generator in the SDK lite for Windows and Mac (That's free!). So try to find the equivalent in the Linux SDK version.</li>
+<li>Finish work on not referencing the static copies of the library when possible.</li>
+<li>Found a bug in nikola\plugins\task\sitemap__init__.py. It wasn't checking if directories were directories in a cross-platform manner. Will report this to the developers with an official patch.</li>
+</ul>
+<h2 id="drew">Drew</h2>
+<ul>
+<li>Order the parts from SparkFun.</li>
+<li>Chassis has built in motors.</li>
+<li>We may need a separate shield for driving the wheels?</li>
+<li>Probably going to drive the motors with DC.</li>
+<li>Settled on multicolor LEDs because single color LEDs can get confusing for debugging.</li>
+</ul>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
         <h1 class="p-name entry-title"><a href="posts/installing-the-emotiv-sdk/" class="u-url">Installing the Emotiv SDK</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn"><a href="https://github.com/phora">phora</a></span></p>
@@ -226,7 +329,7 @@ export PATH="<span class="cp">${</span><span class="n">PYPREFIX</span><span clas
         <!--End of body content-->
 
         <footer>
-            Contents © 2014         <a href="mailto:paraiscc@plu.edu,johnsodm@plu.edu">RoboBrainz</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2015         <a href="mailto:paraiscc@plu.edu,johnsodm@plu.edu">RoboBrainz</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
     </div>
