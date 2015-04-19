@@ -14,7 +14,8 @@ Unfortunately, the project seems to drift farther and farther away even though
 we're sure of the algorithms we will use to implement our robot. There's a [draft EEG waveform processor](https://github.com/RoboBrainz/OpenBCI_EEG_Classifier) that will most likely be using [a bandpass filter in SciPy](http://wiki.scipy.org/Cookbook/ButterworthBandpass) 
 to reduce as much noise as possible from the outside by limiting the data to 
 **12.5 Hz** to **30.0 Hz** for the sensors that take EEG asymmetry into account for certain emotions (like sad
-evoking beta waves primarily on the left and happy evoking beta waves primarily on the right). The other sensors will most likely read facial gestures to further narrow the idenitified emotion.
+evoking beta waves primarily on the left and happy evoking beta waves primarily on the right). The other sensors will most likely read facial gestures to further narrow the idenitified emotion. Alternatively, more
+complex classification trends can be found at an [10-20 function map](https://sites.google.com/site/biofeedbackpages/function-map).
 
 While we're working out the EEG classification, we've also started drafting skeleton code for the
 [cart AI](https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/blob/master/ActionDBTest/ActionDBTest.ino) 
