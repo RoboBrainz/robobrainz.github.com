@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>RoboBrainz</title><link>/</link><description>RoboBrainz</description><atom:link href="/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 23 Apr 2015 03:25:52 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Crunchtime!</title><link>/posts/crunchtime/</link><dc:creator>pengor</dc:creator><description>&lt;div&gt;&lt;p&gt;We give our presentation during the Natural Sciences Academic Festival in just under two weeks and the semester is coming to a close soon after. That means we're kicking our project development into top gear!&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>RoboBrainz</title><link>/</link><description>RoboBrainz</description><atom:link href="/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 23 Apr 2015 04:07:18 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LED Color Palette Draft</title><link>/posts/led-color-palette-draft/</link><dc:creator>phora</dc:creator><description>&lt;div&gt;&lt;p&gt;Sat down and started whipping up a palette for the robot's LEDs and ran it through&lt;br&gt;
+&lt;a href="http://www.vischeck.com/vischeck/vischeckImage.php"&gt;Visicheck&lt;/a&gt; to get a rough idea of how the palettes would look to color-blind people. The negative states are clearly&lt;br&gt;
+differentiable, but the positive emotions and the "I don't know" indicator isn't.&lt;/p&gt;
+&lt;p&gt;You can see the gallery &lt;a href="/galleries/LED_palette/"&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>colors</category><category>led</category><guid>/posts/led-color-palette-draft/</guid><pubDate>Thu, 23 Apr 2015 04:02:42 GMT</pubDate></item><item><title>Crunchtime!</title><link>/posts/crunchtime/</link><dc:creator>pengor</dc:creator><description>&lt;div&gt;&lt;p&gt;We give our presentation during the Natural Sciences Academic Festival in just under two weeks and the semester is coming to a close soon after. That means we're kicking our project development into top gear!&lt;/p&gt;
 &lt;p&gt;What have we been working on? Well our EEG headset is fully functional and capable of collecting data in realtime, but the trick is &lt;a href="https://github.com/RoboBrainz/OpenBCI_EEG_Classifier"&gt;classifying incoming waveforms&lt;/a&gt; as emotional states from that incoming data. We're still trying to get that finalized.&lt;/p&gt;
 &lt;p&gt;The rover is fully operational and can perform a variety of different &lt;a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/tree/master/FancyMovement"&gt;movements&lt;/a&gt; that can be placed in our &lt;a href="https://github.com/RoboBrainz/Thought-Reactive-Robot-Friend/tree/master/ActionDBTest"&gt;database&lt;/a&gt; and selected by the artificial intelligence.&lt;/p&gt;
 &lt;p&gt;Finally, we need to get all of our devices happily talking to each other, which we're also still working on.&lt;/p&gt;
@@ -399,36 +402,4 @@ LiveUSB's Arch Linux installer wouldn't boot. After inspecting the specs for all
 &lt;li&gt;kde-gtk-config - To keep all GUI widget themes consistent (this is important for the accessibility problems mentioned in &lt;a href="/posts/emotiv-epoc-sdk-experiments/"&gt;Emotiv EPOC SDK Experiments&lt;/a&gt;). Also makes changing the color and styling without much technical knowhow.&lt;/li&gt;
 &lt;li&gt;firefox - Basic needs (browsing)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In other news, an email just came in on 2014-11-07 stating that there was an unexpected turn of circumstances that provided. I applied for the refund, especially since we need the tests to be as early as possible. This will mean we have to look at alternate hardware while waiting for it to come in and/or develop any demo code for the EEG device earlier than expected (since the shipments are still applicable even after the refunds).&lt;/p&gt;&lt;/div&gt;</description><category>arch linux</category><category>emotiv</category><category>faculty meeting</category><category>group meeting</category><category>linux</category><category>workspace preparation</category><guid>/posts/installing-arch-linux-in-the-morken-212a-lab/</guid><pubDate>Tue, 04 Nov 2014 03:22:30 GMT</pubDate></item><item><title>Advisor Meeting 2</title><link>/posts/advisor-meeting-2/</link><dc:creator>phora</dc:creator><description>&lt;div&gt;&lt;p&gt;We met with our advisor today from 10:20-10:50 and reported our progress.  Here were the major points of the meeting:&lt;/p&gt;
-&lt;h2 id="joan"&gt;Joan&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Had to work on the Requirements Document mostly on own during the weekend (and likely for next week too).&lt;/li&gt;
-&lt;li&gt;Concerned about how the use cases mention AndroidEEG&lt;ul&gt;
-&lt;li&gt;Draw the storyboards for the use cases without the Android app for the presentation. Including the Android app in the storyboards gives the illusion that Android middleman software will be essential to the functioning of the program.&lt;/li&gt;
-&lt;li&gt;Using the 1Sheeld may reduce the amount of Android code needed.&lt;/li&gt;
-&lt;li&gt;Keep it as optional in case the middleman software makes it easier to write the code.&lt;/li&gt;
-&lt;li&gt;Write the use cases to optionally communicate with the 1sheeld for debugging purposes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Found the data faker program in the Emotiv Epoc SDK (the binary's EmoComposer). Further comments about EmoComposer are in the &lt;a href="/posts/emotiv-epoc-sdk-experiments/"&gt;experiments&lt;/a&gt; post.&lt;/li&gt;
-&lt;li&gt;Can the data faker program be hooked up to the robot? That would be handy to debug the robot in case the headset readings get funky.&lt;/li&gt;
-&lt;li&gt;Set up the presentation permissions for our advisor ASAP.&lt;ul&gt;
-&lt;li&gt;Meet with the advisor again (likely on own) at approximately 09:30 on 2014-10-28&lt;/li&gt;
-&lt;li&gt;Since we'll need a decent draft of our presentation to show to our advisor, pretend that the presentation is due on Tuesday.&lt;/li&gt;
-&lt;li&gt;Further comments on the presentation will be emailed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="personal-notes-thatre-related-to-the-meeting"&gt;Personal notes that're related to the meeting&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;The theme for the website could be updated. It looks a little plain compared to &lt;a href="http://phora.github.io"&gt;my personal site&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Start learning about how heuristic functions are used in AI.&lt;/li&gt;
-&lt;li&gt;Look at the &lt;a href="http://numenta.org/nupic.html"&gt;Numenta NUPIC code&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I should probably enable some form of commenting system on the blog. Will do so now.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="drew"&gt;Drew&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Unavailable for the meeting due to external circumstances.&lt;/li&gt;
-&lt;li&gt;Checked up on the robot parts that came in the mail just in case anything happened to them.&lt;/li&gt;
-&lt;li&gt;Ordered an LED(?) screen to get the free shipping. May come in handy later.&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>emotiv</category><category>faculty meeting</category><category>linux</category><category>presentation</category><category>requirements</category><category>robot</category><category>robot parts</category><category>sdk</category><guid>/posts/advisor-meeting-2/</guid><pubDate>Mon, 27 Oct 2014 18:24:15 GMT</pubDate></item></channel></rss>
+&lt;p&gt;In other news, an email just came in on 2014-11-07 stating that there was an unexpected turn of circumstances that provided. I applied for the refund, especially since we need the tests to be as early as possible. This will mean we have to look at alternate hardware while waiting for it to come in and/or develop any demo code for the EEG device earlier than expected (since the shipments are still applicable even after the refunds).&lt;/p&gt;&lt;/div&gt;</description><category>arch linux</category><category>emotiv</category><category>faculty meeting</category><category>group meeting</category><category>linux</category><category>workspace preparation</category><guid>/posts/installing-arch-linux-in-the-morken-212a-lab/</guid><pubDate>Tue, 04 Nov 2014 03:22:30 GMT</pubDate></item></channel></rss>

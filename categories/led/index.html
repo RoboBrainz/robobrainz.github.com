@@ -3,17 +3,17 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>galleries | RoboBrainz</title>
+    <title>Posts about led | RoboBrainz</title>
 
     
-            <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/theme.css" rel="stylesheet" type="text/css">
+            <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
 
     
-            <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 
       <link rel="canonical" href=".">
 
@@ -21,10 +21,10 @@
 
 
     
-        <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
 
     
-<link rel="stylesheet" type="text/css" href="../assets/css/tipuesearch.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/tipuesearch.css">
 </head>
 <body>
 <div id="tipue_search_content" style="margin-left: auto; margin-right: auto; padding: 20px;"></div>
@@ -34,17 +34,9 @@
 
 
 
+    
 
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<style type="text/css">
-    .image-block {
-        display: inline-block;
-    }
-    .flowr_row {
-        width: 100%;
-    }
-    </style>
+        <link rel="alternate" type="application/rss+xml" title="RSS for tag led" href="../led.xml">
 
 
 
@@ -63,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../">
+            <a class="navbar-brand" href="../../">
 
                 <span id="blog-title">RoboBrainz</span>
             </a>
@@ -73,16 +65,16 @@
             <ul class="nav navbar-nav">
                 
                 <li>
-<a href="../archive.html">Archive</a>
+<a href="../../archive.html">Archive</a>
                 </li>
 <li>
-<a href="../categories/index.html">Tags</a>
+<a href="../index.html">Tags</a>
                 </li>
 <li>
-<a href="../rss.xml">RSS feed</a>
+<a href="../../rss.xml">RSS feed</a>
                 </li>
 <li>
-<a href="../about/index.html">About</a>
+<a href="../../about/index.html">About</a>
 
                 
             </li>
@@ -112,21 +104,19 @@
         <div class="row">
             
             
-    
-<nav class="breadcrumbs">
-<ul class="breadcrumb">
-                <li>galleries</li>
-</ul>
-</nav>
-
-    <h1>galleries</h1>
-    <ul>
-        <li><a href="Arduino_Test/"><i class="glyphicon glyphicon-folder-open"></i> Arduino_Test</a></li>
-        <li><a href="Emotiv_EPOC_SDK/"><i class="glyphicon glyphicon-folder-open"></i> Emotiv_EPOC_SDK</a></li>
-        <li><a href="LED_palette/"><i class="glyphicon glyphicon-folder-open"></i> LED_palette</a></li>
+<article class="tagpage">
+    <header>
+        <h1>Posts about led</h1>
+        <div class="metadata">
+                <p class="feedlink"><a href="../led.xml" type="application/rss+xml">RSS feed</a></p>
+        </div>
+    </header>
+    <ul class="postlist">
+        <li>
+<a href="../../posts/led-color-palette-draft/" class="listtitle">LED Color Palette Draft</a> <time class="listdate" datetime="2015-04-22T21:02:42-07:00" title="2015-04-22 21:02">2015-04-22 21:02</time>
+</li>
     </ul>
-
-<div id="gallery_container"></div>
+</article>
 
         </div>
         <!--End of body content-->
@@ -139,11 +129,11 @@
 </div>
 
 
-            <script src="../assets/js/jquery.min.js"></script>
-            <script src="../assets/js/bootstrap.min.js"></script>
-            <script src="../assets/js/moment-with-locales.min.js"></script>
-            <script src="../assets/js/fancydates.js"></script>
-        <script src="../assets/js/jquery.colorbox-min.js"></script>
+            <script src="../../assets/js/jquery.min.js"></script>
+            <script src="../../assets/js/bootstrap.min.js"></script>
+            <script src="../../assets/js/moment-with-locales.min.js"></script>
+            <script src="../../assets/js/fancydates.js"></script>
+        <script src="../../assets/js/jquery.colorbox-min.js"></script>
     
 <!-- Social buttons -->
 <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
@@ -175,48 +165,9 @@
     </script>
     <!-- end fancy dates -->
     
-<script src="../assets/js/flowr.plugin.js"></script>
-<script>
-jsonContent = [];
-$("#gallery_container").flowr({
-        data : jsonContent,
-        height : 180*.6,
-        padding: 5,
-        rows: -1,
-        render : function(params) {
-            // Just return a div, string or a dom object, anything works fine
-            img = $("<img />").attr({
-                'src': params.itemData.url_thumb,
-                'width' : params.width,
-                'height' : params.height
-            }).css('max-width', '100%');
-            link = $( "<a></a>").attr({
-                'href': params.itemData.url,
-                'class': 'image-reference'
-            });
-            div = $("<div />").addClass('image-block').attr({
-                'title': params.itemData.title,
-                'data-toggle': "tooltip",
-            });
-            link.append(img);
-            div.append(link);
-            div.hover(div.tooltip());
-            return div;
-        },
-        itemWidth : function(data) { return data.size.w; },
-        itemHeight : function(data) { return data.size.h; },
-        complete : function(params) {
-            if( jsonContent.length > params.renderedItems ) {
-                nextRenderList = jsonContent.slice( params.renderedItems );
-            }
-        }
-    });
-$("a.image-reference").colorbox({rel:"gal", maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-</script>
 
-
-<script src="../assets/js/tipuesearch_set.js"></script>
-<script src="../assets/js/tipuesearch.js"></script>
+<script src="../../assets/js/tipuesearch_set.js"></script>
+<script src="../../assets/js/tipuesearch.js"></script>
 <script src="//cdn.muut.com/1/moot.min.js"></script>
 <script>
 $(document).ready(function() {
