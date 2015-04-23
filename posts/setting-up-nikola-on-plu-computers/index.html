@@ -45,8 +45,8 @@
     <meta property="og:description" content="We set up our site for our github page last night using a Linux computer that already had nikola installed. Since we also needed to work on the site at school, we also had to set nikola up on school c">
     <meta property="og:type" content="article">
     <meta property="article:published_time" content="2014-10-09T16:38:18-07:00">
-           <meta property="article:tag" content="PLU computers">
            <meta property="article:tag" content="nikola">
+           <meta property="article:tag" content="PLU computers">
            <meta property="article:tag" content="python">
            <meta property="article:tag" content="python3">
 
@@ -119,7 +119,7 @@
 
 <!-- End of Menubar -->
 
-<div class="container" id="content">
+<div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
         <div class="row">
@@ -182,8 +182,8 @@ export PATH="<span class="cp">${</span><span class="n">PYPREFIX</span><span clas
     <nav>
     
         <ul itemprop="keywords" class="tags">
-           <li><a class="tag p-category" href="../../categories/plu-computers/" rel="tag">PLU computers</a></li>
            <li><a class="tag p-category" href="../../categories/nikola/" rel="tag">nikola</a></li>
+           <li><a class="tag p-category" href="../../categories/plu-computers/" rel="tag">PLU computers</a></li>
            <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
            <li><a class="tag p-category" href="../../categories/python3/" rel="tag">python3</a></li>
         </ul>
@@ -254,7 +254,7 @@ export PATH="<span class="cp">${</span><span class="n">PYPREFIX</span><span clas
 <!-- End of social buttons -->
 
 
-    <script>jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    <script>$('a.image-reference:not(.islink)').colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
     <!-- fancy dates -->
     <script>
     moment.locale("");

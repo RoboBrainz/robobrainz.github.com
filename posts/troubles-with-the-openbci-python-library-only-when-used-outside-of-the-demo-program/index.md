@@ -10,6 +10,13 @@
 .. author: phora
 -->
 
+**[EDIT]:** Since Monday (2015-04-20), we've been able to implement the bug fix that the OpenBCI
+developers have told us in the forum thread when we asked about why our program wouldn't write
+to a \*.tsv file even when the board was on. The reason why it wouldn't is that we forgot to
+do the [init sequence](http://openbci.com/index.php/forum/#/discussion/comment/2153) that the
+demo program included with the OpenBCI python library was doing before it ran any of the
+plugins.
+
 Unfortunately, the project seems to drift farther and farther away even though
 we're sure of the algorithms we will use to implement our robot. There's a [draft EEG waveform processor](https://github.com/RoboBrainz/OpenBCI_EEG_Classifier) that will most likely be using [a bandpass filter in SciPy](http://wiki.scipy.org/Cookbook/ButterworthBandpass) 
 to reduce as much noise as possible from the outside by limiting the data to 

@@ -45,9 +45,9 @@
     <meta property="og:description" content="We give our presentation during the Natural Sciences Academic Festival in just under two weeks and the semester is coming to a close soon after. That means we're kicking our project development into t">
     <meta property="og:type" content="article">
     <meta property="article:published_time" content="2015-04-18T23:50:00-08:00">
-           <meta property="article:tag" content="EEG">
            <meta property="article:tag" content="arduino">
            <meta property="article:tag" content="crunchtime">
+           <meta property="article:tag" content="EEG">
            <meta property="article:tag" content="linux">
            <meta property="article:tag" content="project">
            <meta property="article:tag" content="python">
@@ -123,7 +123,7 @@
 
 <!-- End of Menubar -->
 
-<div class="container" id="content">
+<div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
         <div class="row">
@@ -164,9 +164,9 @@
     <nav>
     
         <ul itemprop="keywords" class="tags">
-           <li><a class="tag p-category" href="../../categories/eeg/" rel="tag">EEG</a></li>
            <li><a class="tag p-category" href="../../categories/arduino/" rel="tag">arduino</a></li>
            <li><a class="tag p-category" href="../../categories/crunchtime/" rel="tag">crunchtime</a></li>
+           <li><a class="tag p-category" href="../../categories/eeg/" rel="tag">EEG</a></li>
            <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
            <li><a class="tag p-category" href="../../categories/project/" rel="tag">project</a></li>
            <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
@@ -240,7 +240,7 @@
 <!-- End of social buttons -->
 
 
-    <script>jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    <script>$('a.image-reference:not(.islink)').colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
     <!-- fancy dates -->
     <script>
     moment.locale("");

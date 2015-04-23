@@ -20,7 +20,7 @@
 
 
 
-        <link rel="prev" href="index.html" type="text/html">
+        <link rel="prev" href="." type="text/html">
 
     
         <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
@@ -97,7 +97,7 @@
 
 <!-- End of Menubar -->
 
-<div class="container" id="content">
+<div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
         <div class="row">
@@ -312,7 +312,7 @@ export PATH="<span class="cp">${</span><span class="n">PYPREFIX</span><span clas
         <nav class="postindexpager">
         <ul class="pager">
             <li class="previous">
-                <a href="index.html" rel="prev">Newer posts</a>
+                <a href="." rel="prev">Newer posts</a>
             </li>
         </ul>
         </nav>
@@ -364,7 +364,7 @@ export PATH="<span class="cp">${</span><span class="n">PYPREFIX</span><span clas
 <!-- End of social buttons -->
 
 
-    <script>jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    <script>$('a.image-reference:not(.islink)').colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
     <!-- fancy dates -->
     <script>
     moment.locale("");
