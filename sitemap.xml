@@ -202,7 +202,7 @@
  </url>
  <url>
   <loc>/index-1.html</loc>
-  <lastmod>2015-04-22</lastmod>
+  <lastmod>2015-04-26</lastmod>
  </url>
  <url>
   <loc>/posts/advisor-meeting-1/</loc>
@@ -275,6 +275,10 @@
  <url>
   <loc>/posts/troubles-with-the-openbci-python-library-only-when-used-outside-of-the-demo-program/</loc>
   <lastmod>2015-04-22</lastmod>
+ </url>
+ <url>
+  <loc>/posts/typing-causes-a-bunch-of-eeg-noises-too/</loc>
+  <lastmod>2015-04-26</lastmod>
  </url>
  <url>
   <loc>/tipue_search.html</loc>
