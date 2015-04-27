@@ -2,7 +2,7 @@
 .. title: Typing causes a bunch of EEG noises too
 .. slug: typing-causes-a-bunch-of-eeg-noises-too
 .. date: 2015-04-26 21:22:15 UTC-07:00
-.. tags: openbci,eeg
+.. tags: openbci,EEG
 .. category: 
 .. link: 
 .. description: 
